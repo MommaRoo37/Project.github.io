@@ -1,19 +1,25 @@
 <html>
     <head>
-        <title>Coding Project -- 5 Card Stud Poker</title>
         <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
 		<div id="app"></div>
-		<div class="playArea">
-  			<div id="hand1">Hand 1 - Computer</div>
-  			<div id="result"></div>
-  			<div id="hand2">Hand 2</div>
-			  
-			  <button id="draw" class="draw-btn">Draw Cards</button>
-			  <button id="clear" class="clear">Start Over?</button>
-
+		<div class="playAreaStart">
+  			<h1>Shall we play a game?</h1>
+			  <img align="center" src="wargamesimage.jpg" alt="wargames" width="520" height="540" controls/>
+			<button id="play-game-start-btn" 
+					class="play-btn" 
+					src="https://www.wavsource.com/snds_2020-10-01_3728627494378403/movies/misc/war_games_play_a_game.wav" 
+					onclick="window.location.href = 'start.html';"
+					type="audio/ogg">Yes, let's play!</button>
+					
 		</div>
+
+
+		  <!-- <audio controls>
+			<source src="https://www.wavsource.com/snds_2020-10-01_3728627494378403/movies/misc/war_games_play_a_game." type="audio/ogg">
+		  </audio> -->
+
 
         <script src="./index.js"></script>
     </body>

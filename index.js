@@ -1,10 +1,10 @@
 const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>Coding Project - 5 card Poker</h1>`;
+//appDiv.innerHTML = `<h1>Coding Project - 5 card Poker</h1>`;
 const draw = document.getElementById('draw');
 draw.addEventListener('click', drawCards);
 
 // ***************  Scope #1 ************************************************************
-// Code Project: 5-card stud poker hand.
+// Code Project: 5-card poker hand.
 
 // Results = PokerHand(card1, card2, card3, card4, card5).
 // 10 – Royal Flush
@@ -21,10 +21,6 @@ draw.addEventListener('click', drawCards);
 // Create an array of objects for each card in the deck
 // as 2 - 14 with  #2-10 = #2-10, Jack = 11, Queen = 12, King = 13, Ace = 14
 
-// ****************  Scope #2  ************************************************************
-// Not only should the types of hands be ranked against one another, but the same type of hands need to be ranked.
-// For example, a pair of Aces will be a pair of Kings. If two hands both have aces, highest card wins. If A full house with three Aces and two kings will be a full house with Three Kings and two queens. For flushes and straights, highest card wins.
-// Create the 52 deck of cards
 
 const deck = [
   { value: 2, suit: 'C' },
@@ -184,6 +180,11 @@ function identifyHand(cards) {
     (groupOne.length === 2 || groupTwo.length === 2) &&
     (groupOne.length === 3 || groupTwo.length === 3);
 
+  // Need to Configure High Card
+  // const isSingle =
+  // (cards[4].value === 14) 
+  // (cards[4].value === 13)
+
   // Ranking Order based on cards
   if (isRoyalFlush) return 10;
   if (isStraightFlush) return 9;
@@ -194,6 +195,7 @@ function identifyHand(cards) {
   if (isThreeOfAKind) return 4;
   if (isTwoPair) return 3;
   if (isPair) return 2;
+  // if (isSingle) 
   return 1;
 }
 
@@ -202,6 +204,7 @@ var handArray = {
   hand1: [],
   hand2: [],
 };
+
 
 // Sort hands, reassign suit to be Decimal code image & value (11-14 ONLY) as J, Q, K, A
 function generateCardFaces(hand) {
